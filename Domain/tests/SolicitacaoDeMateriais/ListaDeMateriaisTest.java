@@ -41,17 +41,19 @@ class ListaDeMateriaisTest {
     public void testeSeListaDeMateriaisContemOsItensAdcionados() {
         this.arrayList = this.listaDeMateriais.pegarListaDeMateriais();
 
-        assertEquals(id, this.arrayList.get(0).getId());
-        assertEquals(quantidade, this.arrayList.get(0).getQuantidade());
-        assertEquals(produto, this.arrayList.get(0).getProduto());
+        assertEquals(this.id, this.arrayList.get(0).getId());
+        assertEquals(this.quantidade, this.arrayList.get(0).getQuantidade());
+        assertEquals(this.produto, this.arrayList.get(0).getProduto());
     }
 
-//    @Test
-//    public void testeSeListaDeMateriaisEAtualizadaPeloIndice() {
-//        this.arrayList = this.listaDeMateriais.pegarListaDeMateriais();
-//
-//        assertEquals(id, this.arrayList.get(0).getId());
-//        assertEquals(quantidade, this.arrayList.get(0).getQuantidade());
-//        assertEquals(produto, this.arrayList.get(0).getProduto());
-//    }
+    @Test
+    public void testeSeListaDeMateriaisEAtualizadaPeloIndiceAQuantidade() {
+        this.listaDeMateriais.atualizarMateriais(0, 5);
+
+        this.arrayList = this.listaDeMateriais.pegarListaDeMateriais();
+
+        assertEquals(this.id, this.arrayList.get(0).getId());
+        assertEquals(5, this.arrayList.get(0).getQuantidade());
+        assertEquals(this.produto, this.arrayList.get(0).getProduto());
+    }
 }
