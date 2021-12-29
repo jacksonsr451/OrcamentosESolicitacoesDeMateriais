@@ -48,12 +48,25 @@ class ListaDeMateriaisTest {
 
     @Test
     public void testeSeListaDeMateriaisEAtualizadaPeloIndiceAQuantidade() {
-        this.listaDeMateriais.atualizarMateriais(0, 5);
+        this.quantidade = 5;
+        this.listaDeMateriais.atualizarMateriais(0, this.quantidade);
 
         this.arrayList = this.listaDeMateriais.pegarListaDeMateriais();
 
         assertEquals(this.id, this.arrayList.get(0).getId());
-        assertEquals(5, this.arrayList.get(0).getQuantidade());
+        assertEquals(this.quantidade, this.arrayList.get(0).getQuantidade());
+        assertEquals(this.produto, this.arrayList.get(0).getProduto());
+    }
+
+    @Test
+    public void testeSeListaDeMateriaisEAtualizadaPeloIndiceOMaterial() {
+        this.produto = "Produto Atualizado";
+        this.listaDeMateriais.atualizarMateriais(0, this.produto);
+
+        this.arrayList = this.listaDeMateriais.pegarListaDeMateriais();
+
+        assertEquals(this.id, this.arrayList.get(0).getId());
+        assertEquals(this.quantidade, this.arrayList.get(0).getQuantidade());
         assertEquals(this.produto, this.arrayList.get(0).getProduto());
     }
 }
