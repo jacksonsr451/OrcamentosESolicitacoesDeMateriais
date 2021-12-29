@@ -23,6 +23,10 @@ public class ListaDeMateriais {
         this.listaDeMateriais.get(indice).setProduto(produto);
     }
 
+    public void removeProduto(int indice) {
+        this.listaDeMateriais.remove(indice);
+    }
+
     public ArrayList<ListaDeMateriaisEntity> pegarListaDeMateriais() {
         return this.listaDeMateriais;
     }
