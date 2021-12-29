@@ -19,6 +19,10 @@ public class ListaDeMateriais {
         this.listaDeMateriais.get(indice).setQuantidade(quantidade);
     }
 
+    public void atualizarMateriais(int indice, String produto) {
+        this.listaDeMateriais.get(indice).setProduto(produto);
+    }
+
     public ArrayList<ListaDeMateriaisEntity> pegarListaDeMateriais() {
         return this.listaDeMateriais;
     }
