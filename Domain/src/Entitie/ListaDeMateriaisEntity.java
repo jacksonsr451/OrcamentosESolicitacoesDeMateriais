@@ -1,23 +1,23 @@
 package src.Entitie;
 
 public class ListaDeMateriaisEntity {
-    public int id;
+    public String id;
     public int quantidade;
     public String produto;
 
     public ListaDeMateriaisEntity() {}
 
-    public ListaDeMateriaisEntity(int id, int quantidade, String produto) {
+    public ListaDeMateriaisEntity(String id, int quantidade, String produto) {
         this.id = id;
         this.quantidade = quantidade;
         this.produto = produto;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
